@@ -1,0 +1,10 @@
+#!/bin/bash
+
+[[ -z $USERID ]] && USERID=33
+
+# Check to see if dir is empty or not
+cd /var/www/html
+chown -R $USERID:www-data .
+chmod -R 775 .
+# Start php-fpm
+php-fpm
