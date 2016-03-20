@@ -23,6 +23,7 @@ RUN echo | pecl install imagick-beta
 
 
 COPY src/conf/php/php.ini /usr/local/etc/php/php.ini
+COPY src/conf/php/www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY src/commands/start /usr/local/bin/start
 RUN chmod 755 /usr/local/bin/start
 CMD ["/usr/local/bin/start"]

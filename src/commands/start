@@ -5,6 +5,6 @@
 # Check to see if dir is empty or not
 cd /var/www/html
 chown -R $USERID:www-data .
-chmod -R 775 .
+chmod -R 770 .
 # Start php-fpm
 php-fpm
